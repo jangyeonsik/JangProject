@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+ <sawon><!-- table명 -->
+ 	<list><!-- ROW -->
+ 		<sabun>1</sabun> <!-- Column -->
+ 		<name>홍길동</name>
+ 		<dept>개발부</dept>
+ 		<sex>남자</sex>
+ 		<age>26</age>
+ 	</list>
+ 	<list>
+ 		<sabun>2</sabun>
+ 		<name>심청이</name>
+ 		<dept>개발부</dept>
+ 		<sex>여자</sex>
+ 		<age>24</age>
+ 	</list>
+ 	<list>
+ 		<sabun>3</sabun>
+ 		<name>박문수</name>
+ 		<dept>개발부</dept>
+ 		<sex>남자</sex>
+ 		<age>28</age>
+ 	</list>
+ </sawon>
+ 

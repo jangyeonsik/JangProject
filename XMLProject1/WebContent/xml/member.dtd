@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	XML의 태그,속성,변수를 지정하는 언어
+	<!ELEMENT>
+		<member>
+			<list no="a1">
+				<id>admin</id>
+				<pwd>1234</pwd>
+				<name first="홍">홍길동</name>
+				<hp>000-0000-0000</hp>
+				<from/>
+			</list>
+			<list no="a2">
+				<id>admin</id>
+				<name>홍길동</name>
+				<home>000-0000-0000</home>
+				<from/>
+			</list>
+		</member>
+	<!ATTLIST>
+	<!ENTITY nbsp " "> => &nbsp;
+	<!ENTITY a "aa"> => &a;
+	
+	+ : 여러번 써도 되지만 한번은 무조건 사용해야된다
+	* : 안써도 되고 여러번 써도됨
+	? : 안써도 되고 한번써도 되고 근데 여러번은 사용못함
+	| : 또는(선택)
+	default = 반드시 한번만 사용
+-->
+
+<!ELEMENT member (list+)>
+<!ELEMENT list (id,pwd?,name,(hp|home),from)>
+<!ATTLIST list no ID #REQUIRED>
+<!--
+	ID    ,   IDREF    ,    NOTATION : 공백을 허용하지 않는다   ,   CDATA :공백을 허용
+	==		  =====			========						=====
+	UNIQUE	  FOREGIN KEY   일반문자열							일반문자열
+	
+	#REQUIRED : NOT NULL
+	#IMPLIED : NULL 허용
+	#FIXED : DEFAULT
+-->
+<!ELEMENT id (#PCDATA)> <!--#PCDATA 문자열이 온다-->
+<!ELEMENT pwd (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name first CDATA #IMPLIED>
+<!ELEMENT hp (#PCDATA)>
+<!ELEMENT home (#PCDATA)>
+<!ELEMENT from EMPTY>
+<!ATTLIST from nara CDATA #FIXED "한국">
+
+
+
